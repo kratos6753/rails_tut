@@ -1,0 +1,27 @@
+<h2>Listing Users created</h2>
+<table>
+	<thead>
+		<tr>
+			<td>Name</td>
+			<td>Email</td>
+			<td>Roll</td>
+			<td>Hostel</td>
+			<td>Room</td>
+			<td>Phone</td>
+		</tr>
+	</thead>
+	<tbody>
+		<% @users.each do |f| %>
+			<tr>
+				<td><%= f.name %></td>
+				<td><%= f.email %></td>
+				<td><%= f.roll %></td>
+				<td><%= f.hostel %></td>
+				<td><%= f.room %></td>
+				<td><%= f.phone %></td>
+			</tr>
+		<% end %>
+	</tbody>
+</table>
+
+<%= link_to 'Register',new_user_path %>
